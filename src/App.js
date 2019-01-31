@@ -31,40 +31,12 @@ class App extends Component {
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="/">Hasura Todo</a>
+              Liberry
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullRight>
-              <NavItem eventKey={1}>
-                {
-                  isAuthenticated() && (
-                    <Button
-                      bsStyle="success"
-                      className="btn-margin"
-                      onClick={this.goTo.bind(this, 'manage')}
-                    >
-                      Manage Todos
-            </Button>
-                  )
-                }
-
-              </NavItem>
-              <NavItem eventKey={2}>
-                {
-                  isAuthenticated() && (
-                    <Button
-                      bsStyle="success"
-                      className="btn-margin"
-                      onClick={this.goTo.bind(this, 'alltodos')}
-                    >
-                      All Todos
-            </Button>
-                  )
-                }
-
-              </NavItem>
               <NavItem eventKey={3} href="#">
                 {
                   !isAuthenticated() && (
@@ -98,7 +70,7 @@ class App extends Component {
               <Grid>
                 <Row>
                   <Col md={2} mdPush={5}>
-                    <h3>React Todo</h3>
+                    <h3>Liberry</h3>
                     <Button
                       bsStyle="primary"
                       className="btn-margin"

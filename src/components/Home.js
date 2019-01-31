@@ -15,11 +15,13 @@ class Home extends Component {
         'Authorization': `Bearer ${ACCESS_TOKEN}`,
       }
     });
+    console.log(ACCESS_TOKEN);
   }
 
   login() {
     this.props.auth.login();
   }
+
   render() {
     const { isAuthenticated } = this.props.auth;
     return (

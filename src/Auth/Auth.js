@@ -3,11 +3,7 @@ import history from '../history';
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
-    domain: 'brianduongh.auth0.com',
-    clientID: 'LIlQvbUDFfe56mU28Di3O7E3g6eKJip3',
-    redirectUri: 'http://localhost:3000/callback',
-    responseType: 'token id_token',
-    scope: 'openid'
+    ${INSERT AUTH0 CLIENT HERE}
   });
 
   constructor() {

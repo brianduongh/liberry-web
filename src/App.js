@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Navbar, Button, Nav, NavItem, Grid, Row, Col } from 'react-bootstrap';
+import { Navbar, Button, Nav, NavItem } from 'react-bootstrap';
+import { Container } from 'reactstrap';
+import Berry from './images/grapes.png';
 
 class App extends Component {
   goTo(route) {
@@ -28,9 +30,9 @@ class App extends Component {
     return (
 
       <div>
-        <Navbar inverse collapseOnSelect>
+        <Navbar style={{ 'border-radius':'0px', 'margin-bottom':'0px' }} inverse collapseOnSelect>
           <Navbar.Header>
-            <Navbar.Brand>
+            <Navbar.Brand style={{ 'margin-top': '5px' }}>
               Liberry
             </Navbar.Brand>
             <Navbar.Toggle />
@@ -66,21 +68,19 @@ class App extends Component {
         </Navbar>
         {
           !isAuthenticated() && (
-            <div className="container">
-              <Grid>
-                <Row>
-                  <Col md={2} mdPush={5}>
-                    <h3>Liberry</h3>
-                    <Button
-                      bsStyle="primary"
-                      className="btn-margin"
-                      onClick={this.login.bind(this)}
-                    >
-                      Log In To Continue
-                  </Button>
-                  </Col>
-                </Row>
-              </Grid>
+            <div>
+              <Container style={{
+                'display': 'flex',
+                'align-items': 'center',
+                'justify-content': 'center',
+                'text-align': 'center',
+                'padding-top': '100px'
+              }}>
+                <img src={Berry} alt="berry" />
+                <br />
+                <h1>Welcome to Liberry! A personal library database for you to store your collection of books and to keep track of books that you are currently missing.</h1>
+                <img src={Berry} alt="berry" />
+              </Container>
             </div>
           )
         }

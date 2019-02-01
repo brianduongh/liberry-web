@@ -15,7 +15,6 @@ class Home extends Component {
         'Authorization': `Bearer ${ACCESS_TOKEN}`,
       }
     });
-    console.log(ACCESS_TOKEN);
   }
 
   login() {

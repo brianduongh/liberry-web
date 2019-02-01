@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button } from 'reactstrap';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import { bookQuery } from './Addbook';
@@ -32,7 +32,7 @@ class DeleteBooks extends Component {
     return(
       <Mutation mutation={deleteBook}>
         {(delete_Books, { data }) => (
-          <Button onClick={e => {
+          <Button color="danger" onClick={e => {
             e.preventDefault();
             this.deletebook(delete_Books)
           }}>

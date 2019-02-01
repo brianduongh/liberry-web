@@ -48,6 +48,7 @@ class Addbook extends Component {
 
   addbooks(insert_Books) {
     insert_Books({ variables: this.state, refetchQueries: [{ query: bookQuery }] });
+    this.setState({ isbn: '' });
   }
 
   render() {
@@ -55,6 +56,7 @@ class Addbook extends Component {
       <Mutation mutation={addBooks}>
         {(insert_Books, { data }) => (
             <Form
+                style={{ 'padding-bottom': '20px' }}
                 onSubmit={e => {
                     e.preventDefault();
                     axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.state.isbn}+isbn&key=AIzaSyCekaWwYYUa61_90Z8UVPjdoYvVAWTkqhI`)
@@ -79,7 +81,7 @@ class Addbook extends Component {
                             onChange={e => this.setState({ isbn: e.target.value })}
                         />
                         <InputGroup.Button>
-                            <Button type="submit">plus</Button>
+                            <Button type="submit"><i className="fas fa-plus"></i></Button>
                         </InputGroup.Button>
                     </InputGroup>
                 </FormGroup>
